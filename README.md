@@ -16,7 +16,7 @@ Get the appropriate [Arduino IDE](https://www.arduino.cc/en/software/) for your 
 
 **Note:** for my platform (Ubuntu 24.04), I downloaded the "Linux ZIP file" option and additional tweaking for the sandbox was required. If you get an error message that states:
 
-    [252708:0429/091203.327243:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /home/matt/Arduino/arduino-ide_2.3.8_Linux_64bit/chrome-sandbox is owned by root and has mode 4755.
+    [252708:0429/091203.327243:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /home/matt/Arduino/arduino-ide_X.Y.ZZZ_Linux_64bit/chrome-sandbox is owned by root and has mode 4755.
     Trace/breakpoint trap (core dumped)
 
 To fix:
@@ -28,6 +28,12 @@ To fix:
 Then you can just run the `arduino-ide` executable and it should work.
 
 It will likely want to update libraries - I let it do so.
+
+### ESP8266 Core for Arduino
+
+[Follow these instructions](https://github.com/esp8266/Arduino#installing-with-boards-manager)
+
+### Board selection
 
 Once the IDE is launched and updated, Select `Tools -> Board -> ESP8266 Boards -> LOLIN(WEMOS) D1 R2 & Mini`.
 
@@ -48,6 +54,8 @@ And then restart the IDE.
 You can check that it was successfully installed by doing `CTRL + SHIFT + P` to open the command palette and then typing "Upload". There should now be an entry for `Upload LittleFS to Pico/ESP8266/ESP32`. If not, double check that the file is in the correct place.
 
 ### Parcel (to compile the materialize source)
+
+**Note:** This requires `npm`. e.g. `sudo apt install npm`.
 
 Follow [these instructions](https://parceljs.org/getting-started/webapp/#installation) and **install it into the gui directory** which is usually just:
 
