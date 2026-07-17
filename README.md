@@ -53,9 +53,11 @@ And then restart the IDE.
 
 You can check that it was successfully installed by doing `CTRL + SHIFT + P` to open the command palette and then typing "Upload". There should now be an entry for `Upload LittleFS to Pico/ESP8266/ESP32`. If not, double check that the file is in the correct place.
 
-### ESP Async Webserver
+### ESP Async Webserver and ESP Async TCP
 
-In Arduino IDE, go to `Tools->Manage Libraries`, and search for "ESPAsyncWebserver". Install the "ESP Async WebServer by ESP32Async". At time of writing, the version is 3.11.2.
+1. In Arduino IDE, go to `Tools->Manage Libraries`
+2. Search for "ESPAsyncWebserver". Install the "ESP Async WebServer by ESP32Async". At time of writing, the version is 3.11.2.
+3. Search for "ESPAsyncTCP". Install the "ESP Async TCP by ESP32Async". At time of writing, the version is 2.0.0.
 
 ### Parcel (to compile the materialize source)
 
